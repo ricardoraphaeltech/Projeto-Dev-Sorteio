@@ -1,0 +1,208 @@
+/* font-family: "Roboto", sans-serif; */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: "Roboto", sans-serif;
+    padding: 0 20px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 700px;
+    padding: 20px;
+    /* position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
+    margin: 150px auto;
+}
+
+.logo-img {
+    width: 180px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 80px;
+    font-weight: 900;
+    margin-bottom: 70px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.content h3 {
+    font-size: 32px;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+
+.content .input-sorteador {
+    display: flex;
+    gap: 50px;
+    width: 100%;
+}
+
+.content .input-sorteador input {
+    border-radius: 14px;
+    width: 100%;
+    background-color: #404040;
+    border: 1px solid #7a7a7a;
+    color: #fff;
+    padding: 12px 20px;
+    font-size: 40px;
+    font-weight: 500;
+}
+
+.content .input-sorteador input:focus {
+    border: solid 1px #ffd941;
+    box-shadow: 0 0 8px #ffd941;
+}
+
+.content .input-sorteador input::placeholder {
+    color: #999;
+}
+
+.content .campo-resultado {
+    color: #555;
+    font-size: 35px;
+    font-weight: 500;
+    margin: 15px 0 30px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content .button-sortear {
+    width: 305px;
+    font-size: 36px;
+    font-weight: 700;
+    padding: 14px;
+    border-radius: 10px;
+    background-color: #f3c200;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    box-shadow: 0 0 8px #f3c200;
+    animation: led-glow 1s ease-in-out infinite alternate;
+    transition: background-color, color .3s ease-in-out;
+}
+
+@keyframes led-glow {
+    from {
+        box-shadow: 0 0 0 #f3c200;
+    }
+
+    to {
+        box-shadow: 0 0 15px #f3c200;
+    }
+}
+
+.content .button-sortear:hover {
+    background-color: #ffd941;
+    color: #000;
+}
+
+.content .button-sortear:active {
+    transform: scale(0.97);
+}
+
+@media screen and (max-width: 755px) {
+    main {
+        width: 95%;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    main {
+        margin: 100px auto;
+        width: 85%;
+    }
+
+    main h1 {
+        font-size: 70px;
+    }
+
+    .content .input-sorteador {
+        flex-wrap: wrap;
+        width: 305px;
+    }
+
+    .content .campo-resultado {
+        text-align: center;
+        width: 305px;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    main h1 {
+        font-size: 60px;
+        margin-bottom: 45px;
+    }
+}
+
+@media screen and (max-width: 465px) {
+    main {
+        width: 80%;
+    }
+
+    main .logo-img {
+        width: 140px;
+    }
+
+    main h1 {
+        font-size: 55px;
+    }
+
+    .content .input-sorteador {
+        width: 100%;
+    }
+
+    .content .campo-resultado {
+        height: 125px;
+        width: 100%;
+    }
+
+    .content .button-sortear {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 413px) {
+    main {
+        margin-top: 80px;
+        width: 90%;
+    }
+
+    main h1 {
+        font-size: 50px;
+    }
+}
+
+@media screen and (max-width: 1180px) and (orientation: landscape) {
+    main {
+        margin: 45px auto;
+    }
+}
+
+@media screen and (max-width: 1040px) and (orientation: landscape) {
+    main {
+        margin: 20px auto;
+    }
+}
